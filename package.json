@@ -16,9 +16,6 @@
     "mongoose": "^5.12.11",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "@babel/register": "^7.13.16"
-  },
-  "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
@@ -28,6 +25,9 @@
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "@babel/runtime": "^7.12.5",
+    "@babel/register": "^7.13.16"
+  },
+  "devDependencies": {
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
