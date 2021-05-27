@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "webpack serve --config webpack.dev.js --open",
     "build": "webpack --node-env=production --config webpack.prod.js",
-    "start": "npm run build && node server"
+    "start": "node server"
   },
   "keywords": [],
   "author": "mesgh",
