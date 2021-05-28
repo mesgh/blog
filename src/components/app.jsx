@@ -42,6 +42,9 @@ export function App() {
         <Route exact path="/404">
           <NotFound changeTitle={changeTitle} />
         </Route>
+        <Route>
+          <NotFound changeTitle={changeTitle} />
+        </Route>
       </Switch>
     </React.Fragment>
   );
