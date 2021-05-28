@@ -3,7 +3,11 @@ import { Post } from '../models/post';
 const CRUD = {
   async create(r) {
     const { body } = r;
-    console.log(body);
+    Object.keys(body).forEach(key => {
+      if (key !== 'id'){
+        body[key] = body[key].trim();
+      }
+    });
     if (body.title && body.description && body.content && body.author && body.id) {
       const post = await Post.findOne({ title: body.title });
       if (post) {

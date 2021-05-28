@@ -18,8 +18,12 @@ function New(props) {
     })
       .then(res => res.json())
       .then(res => {
-        props.updatePosts();
-        window.location.pathname = `/view/${res.body.id}`;
+        if (res.body) {
+          props.updatePosts();
+          window.location.pathname = `/view/${res.body.id}`;
+        } else {
+          alert(res.message);
+        }
       });
   }
 
