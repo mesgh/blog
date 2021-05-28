@@ -4,6 +4,7 @@ import Nav from "../views/Nav";
 import List from "../views/List";
 import View from "../views/View";
 import New from "../views/New";
+import NotFound from "../views/NotFound";
 
 export function App() {
   const [title, setTitle] = useState("");
@@ -37,6 +38,9 @@ export function App() {
         </Route>
         <Route exact path="/new">
           <New changeTitle={changeTitle} updatePosts={updatePosts} />
+        </Route>
+        <Route exact path="/404">
+          <NotFound changeTitle={changeTitle} />
         </Route>
       </Switch>
     </React.Fragment>

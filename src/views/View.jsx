@@ -10,9 +10,13 @@ function View(props) {
   useEffect(() => {
     fetch(`/api/posts/${id}`)
       .then((res) => res.json())
-      .then(({ body: newPost }) => {
-        setPost(newPost);
-        props.changeTitle(newPost.title);
+      .then(res => {
+        if (res.body) {
+          setPost(res.body);
+          props.changeTitle(res.body.title);
+        } else {
+          window.location.pathname = '/404';
+        }
       });
   }, []);
 
